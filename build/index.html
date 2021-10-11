@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Рассчет стоимости заказа груза">
+  <title>Рассчет стоимости заказа груза</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/HelveticaNeue-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/HelveticaNeue-bold.woff2" as="font" type="font/woff2" crossorigin="">
+</head>
+<body>
+  <div class="body-wrapper">
+    <h1 class="visually-hidden">Рассчет стоимости заказа груза</h1>
+    <header class="main-header main-header--nojs">
+      <h2 class="main-header__title">FTL: Прямая машина</h2>
+    </header>
+    <main class="main-page">
+      <form>
+        <ledend class="visually-hidden">Форма заказа</ledend>
+        <ul class="main-page__list">
+          <li>
+            <div class="main-page__title-wrapper">
+              <span>1</span>
+              <h3>Маршрут</h3>
+            </div>
+            <div class="main-page__from-wrapper">
+              <label for="from">Откуда</label>
+              <input id="from">
+            </div>
+            <div class="main-page__to-wrapper">
+              <label for="to">Куда</label>
+              <input id="to">
+            </div>
+          </li>
+          <li>
+            <div class="main-page__title-wrapper">
+              <span>2</span>
+              <h3>Транспорт</h3>
+            </div>
+            <div class="main-page__options-wrapper">
+              <div class="main-page__lifting-capacity-wrapper main-page__lifting-capacity-wrapper--closed">
+                <span>Грузоподъемность</span>
+                <ul class="main-page__lifting-list">
+                  <li class="main-page__lifting-option main-page__lifting-option--active">Не выбран</li>
+                  <li class="main-page__lifting-option">Вариант 1</li>
+                  <li class="main-page__lifting-option">Вариант 2</li>
+                  <li class="main-page__lifting-option">Вариант 3</li>
+                  <li class="main-page__lifting-option">Вариант 4</li>
+                </ul>
+                <button type="button"></button>
+              </div>
+              <div class="main-page__load-type-wrapper main-page__load-type-wrapper--closed">
+                <span>Способ загрузки</span>
+                <ul class="main-page__load-type-list">
+                  <li class="main-page__load-type-option main-page__load-type-option--active">Не выбрано</li>
+                  <li class="main-page__load-type-option">Задняя</li>
+                  <li class="main-page__load-type-option">Вариант 2</li>
+                  <li class="main-page__load-type-option">Вариант 3</li>
+                  <li class="main-page__load-type-option">Вариант 4</li>
+                </ul>
+                <button type="button"></button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="main-page__title-wrapper">
+              <span>3</span>
+              <h3>Груз</h3>
+            </div>
+            <div class="main-page__cargo-type-wrapper main-page__cargo-type-wrapper--closed">
+              <span>Тип груза</span>
+              <ul class="main-page__cargo-type-list">
+                <li class="main-page__cargo-option main-page__cargo-option--active">Не выбран</li>
+                <li class="main-page__cargo-option">Вариант 1</li>
+                <li class="main-page__cargo-option">Вариант 2</li>
+                <li class="main-page__cargo-option">Вариант 3</li>
+                <li class="main-page__cargo-option">Вариант 4</li>
+              </ul>
+              <button type="button"></button>
+            </div>
+            <div class="main-page__options-wrapper">
+              <div class="main-page__danger-class-wrapper main-page__danger-class-wrapper--closed">
+                <span>Класс опасности</span>
+                <ul>
+                  <li class="main-page__danger-option">Не выбрано</li>
+                  <li class="main-page__danger-option main-page__danger-option--active">Класс 5 — Окисляющие вещества и органические перекиси</li>
+                  <li class="main-page__danger-option">Вариант 1</li>
+                  <li class="main-page__danger-option">Вариант 2</li>
+                  <li class="main-page__danger-option">Вариант 3</li>
+                  <li class="main-page__danger-option">Вариант 4</li>
+                </ul>
+                <button type="button"></button>
+              </div>
+              <div class="main-page__price-wrapper">
+                <label for="price">Объявленная ценность, ₽</label>
+                <input id="price" type="number" placeholder="&ge; 1">
+              </div>
+            </div>
+            <div class="main-page__temperature-regime-wrapper">
+              <input type="checkbox" id="temperature-regime" class="visually-hidden">
+              <label for="temperature-regime">Требуется температурный режим</label>
+            </div>
+          </li>
+          <li>
+            <div class="main-page__title-wrapper">
+              <span>4</span>
+              <h3>Время</h3>
+            </div>
+            <div class="main-page__span-wrapper">
+              <span>Когда прибыть на точку</span>
+              <span>700 км в день</span>
+            </div>
+            <div class="main-page__adress-one-wrapper">
+              <input class="visually-hidden" type="checkbox" id="adress-one">
+              <label for="adress-one">Адрес не указан</label>
+              <button type="button">Не выбрано</button>
+            </div>
+            <div class="main-page__adress-two-wrapper">
+              <input class="visually-hidden" type="checkbox" id="adress-two">
+              <label for="adress-two">Адрес не указан</label>
+              <button type="button">Не выбрано</button>
+            </div>
+          </li>
+        </ul>
+        <div class="main-page__comments">
+          <h3>Комментарий к заказу</h3>
+          <textarea placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+        </div>
+      </form>
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
