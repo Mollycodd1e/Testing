@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Рассчет стоимости заказа груза">
+  <title>Рассчет стоимости заказа груза</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/HelveticaNeue-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/HelveticaNeue-bold.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+  <div class="body-wrapper">
+    <h1 class="visually-hidden">Рассчет стоимости заказа груза</h1>
+    <header class="main-header main-header--nojs">
+      <h2 class="main-header__title">FTL: Прямая машина</h2>
+    </header>
+    <main class="main-page">
+      <ul class="main-page__list">
+        <li>
+          <span>1</span>
+          <h3 class="main-header__title">Маршрут</h3>
+          <div class="main-page__from-wrapper">
+            <label for="from">Откуда</label>
+            <input id="from">
+          </div>
+          <div class="main-page__to-wrapper">
+            <label for="to">Куда</label>
+            <input id="to">
+          </div>
+        </li>
+        <li>
+          <span>2</span>
+          <h3 class="main-header__title">Транспорт</h3>
+          <div class="main-page__lifting-capacity-wrapper">
+            <span>Грузоподъемность</span>
+            <ul class="main-page__lifting-list">
+              <li>Не выбран</li>
+              <li>Вариант 1</li>
+              <li>Вариант 2</li>
+              <li>Вариант 3</li>
+              <li>Вариант 4</li>
+            </ul>
+          </div>
+          <div class="main-page__load-type-wrapper">
+            <span>Способ загрузки</span>
+            <ul class="main-page__load-type-list">
+              <li>Задняя</li>
+              <li>Вариант 1</li>
+              <li>Вариант 2</li>
+              <li>Вариант 3</li>
+              <li>Вариант 4</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <span>3</span>
+          <h3 class="main-header__title">Груз</h3>
+          <div class="main-page__cargo-type-wrapper">
+            <span>Тип груза</span>
+            <ul class="main-page__cargo-type-list">
+              <li>Не выбран</li>
+              <li>Вариант 1</li>
+              <li>Вариант 2</li>
+              <li>Вариант 3</li>
+              <li>Вариант 4</li>
+            </ul>
+          </div>
+          <div class="main-page__danger-class-wrapper">
+            <span>Класс опасности</span>
+            <ul class="main-page__cargo-type-list">
+              <li>Не выбрано</li>
+              <li>Класс 5 — Окисляющие вещества и органические перекиси</li>
+              <li>Вариант 1</li>
+              <li>Вариант 2</li>
+              <li>Вариант 3</li>
+              <li>Вариант 4</li>
+            </ul>
+          </div>
+          <div class="main-page__load-type-wrapper">
+            <label for="cargo-type">Объявленная ценность, ₽</label>
+            <input id="cargo-type">
+          </div>
+          <div class="main-page__temperature-regime-wrapper">
+            <input type="checkbox" id="temperature-regime">
+            <label for="temperature-regime">Требуется температурный режим</label>
+          </div>
+        </li>
+        <li>
+          <span>4</span>
+          <h3 class="main-header__title">Время</h3>
+          <div class="main-page__span-wrapper">
+            <span>Когда прибыть на точку</span>
+            <span>700 км в день</span>
+          </div>
+          <div class="main-page__temperature-regime-wrapper">
+            <input type="checkbox" id="temperature-regime">
+            <label for="temperature-regime">Адрес не указан</label>
+          </div>
+          <div class="main-page__temperature-regime-wrapper">
+            <input type="checkbox" id="temperature-regime">
+            <label for="temperature-regime">Адрес не указан</label>
+          </div>
+        </li>
+      </ul>
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+  <script src="js/main.js"></script>
+</body>
