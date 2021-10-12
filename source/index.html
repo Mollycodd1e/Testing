@@ -20,17 +20,20 @@
         <ledend class="visually-hidden">Форма заказа</ledend>
         <ul class="main-page__list">
           <li>
-            <div class="main-page__title-wrapper">
-              <span>1</span>
-              <h3>Маршрут</h3>
-            </div>
-            <div class="main-page__from-wrapper">
-              <label for="from">Откуда</label>
-              <input id="from">
-            </div>
-            <div class="main-page__to-wrapper">
-              <label for="to">Куда</label>
-              <input id="to">
+            <div class="main-page__description-wrapper">
+              <div class="main-page__title-wrapper">
+                <span>1</span>
+                <h3>Маршрут</h3>
+              </div>
+              <div class="main-page__from-wrapper">
+                <label for="from">Откуда</label>
+                <input id="from">
+              </div>
+              <div class="main-page__to-wrapper">
+                <label for="to">Куда</label>
+                <input id="to">
+              </div>
+              <p>Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.</p>
             </div>
           </li>
           <li>
@@ -42,11 +45,11 @@
               <div class="main-page__lifting-capacity-wrapper main-page__lifting-capacity-wrapper--closed">
                 <span>Грузоподъемность</span>
                 <ul class="main-page__lifting-list">
-                  <li class="main-page__lifting-option main-page__lifting-option--active">Не выбран</li>
-                  <li class="main-page__lifting-option">Вариант 1</li>
-                  <li class="main-page__lifting-option">Вариант 2</li>
-                  <li class="main-page__lifting-option">Вариант 3</li>
-                  <li class="main-page__lifting-option">Вариант 4</li>
+                  <li class="main-page__lifting-capacity-option main-page__lifting-capacity-option--active">Не выбран</li>
+                  <li class="main-page__lifting-capacity-option">Вариант 1</li>
+                  <li class="main-page__lifting-capacity-option">Вариант 2</li>
+                  <li class="main-page__lifting-capacity-option">Вариант 3</li>
+                  <li class="main-page__lifting-capacity-option">Вариант 4</li>
                 </ul>
                 <button type="button"></button>
               </div>
@@ -68,38 +71,50 @@
               <span>3</span>
               <h3>Груз</h3>
             </div>
-            <div class="main-page__cargo-type-wrapper main-page__cargo-type-wrapper--closed">
-              <span>Тип груза</span>
-              <ul class="main-page__cargo-type-list">
-                <li class="main-page__cargo-option main-page__cargo-option--active">Не выбран</li>
-                <li class="main-page__cargo-option">Вариант 1</li>
-                <li class="main-page__cargo-option">Вариант 2</li>
-                <li class="main-page__cargo-option">Вариант 3</li>
-                <li class="main-page__cargo-option">Вариант 4</li>
-              </ul>
-              <button type="button"></button>
-            </div>
-            <div class="main-page__options-wrapper">
-              <div class="main-page__danger-class-wrapper main-page__danger-class-wrapper--closed">
-                <span>Класс опасности</span>
-                <ul>
-                  <li class="main-page__danger-option">Не выбрано</li>
-                  <li class="main-page__danger-option main-page__danger-option--active">Класс 5 — Окисляющие вещества и органические перекиси</li>
-                  <li class="main-page__danger-option">Вариант 1</li>
-                  <li class="main-page__danger-option">Вариант 2</li>
-                  <li class="main-page__danger-option">Вариант 3</li>
-                  <li class="main-page__danger-option">Вариант 4</li>
+            <div class="main-page__cargo-wrapper">
+              <div class="main-page__cargo-type-wrapper main-page__cargo-type-wrapper--closed">
+                <span>Тип груза</span>
+                <ul class="main-page__cargo-type-list">
+                  <li class="main-page__cargo-type-option main-page__cargo-type-option--active">Не выбран</li>
+                  <li class="main-page__cargo-type-option">Вариант 1</li>
+                  <li class="main-page__cargo-type-option">Вариант 2</li>
+                  <li class="main-page__cargo-type-option">Вариант 3</li>
+                  <li class="main-page__cargo-type-option">Вариант 4</li>
                 </ul>
                 <button type="button"></button>
               </div>
-              <div class="main-page__price-wrapper">
-                <label for="price">Объявленная ценность, ₽</label>
-                <input id="price" type="number" placeholder="&ge; 1">
+              <div class="main-page__cargo-options-wrapper">
+                <div class="main-page__danger-class-wrapper main-page__danger-class-wrapper--closed">
+                  <span>Класс опасности</span>
+                  <ul>
+                    <li class="main-page__danger-class-option">Не выбрано</li>
+                    <li class="main-page__danger-class-option main-page__danger-class-option--active">Класс 5 — Окисляющие вещества и органические перекиси</li>
+                    <li class="main-page__danger-class-option">Вариант 1</li>
+                    <li class="main-page__danger-class-option">Вариант 2</li>
+                    <li class="main-page__danger-class-option">Вариант 3</li>
+                    <li class="main-page__danger-class-option">Вариант 4</li>
+                  </ul>
+                  <button type="button"></button>
+                </div>
+                <div class="main-page__price-wrapper">
+                  <label for="price">Объявленная ценность, &#8381</label>
+                  <input id="price" type="number" placeholder="&ge; 1">
+                </div>
               </div>
-            </div>
-            <div class="main-page__temperature-regime-wrapper">
-              <input type="checkbox" id="temperature-regime" class="visually-hidden">
-              <label for="temperature-regime">Требуется температурный режим</label>
+              <div class="main-page__temperature-regime-wrapper">
+                <input type="checkbox" id="temperature-regime" class="visually-hidden">
+                <label for="temperature-regime">Требуется температурный режим</label>
+              </div>
+              <div class="main-page__temperature-select-wrapper main-page__temperature-select-wrapper--closed">
+                <div class="main-page__temperature-from-wrapper">
+                  <input type="number" id="temperature-from">
+                  <label for="temperature-from">от, &#176;C</label>
+                </div>
+                <div class="main-page__temperature-to-wrapper">
+                  <input type="number" id="temperature-to">
+                  <label for="temperature-to">до, &#176;C</label>
+                </div>
+              </div>
             </div>
           </li>
           <li>
@@ -112,15 +127,14 @@
               <span>700 км в день</span>
             </div>
             <div class="main-page__adress-one-wrapper">
-              <input class="visually-hidden"
-              type="checkbox" id="adress-one">
+              <input class="visually-hidden" type="checkbox" id="adress-one">
               <label for="adress-one">Адрес не указан</label>
-              <button type="button">Не выбрано</button>
+              <button type="button" disabled>Не выбрано</button>
             </div>
             <div class="main-page__adress-two-wrapper">
               <input class="visually-hidden" type="checkbox" id="adress-two">
               <label for="adress-two">Адрес не указан</label>
-              <button type="button">Не выбрано</button>
+              <button type="button" disabled>Не выбрано</button>
             </div>
           </li>
         </ul>
@@ -131,7 +145,6 @@
       </form>
     </main>
     <footer>
-
     </footer>
   </div>
   <script src="js/main.js"></script>

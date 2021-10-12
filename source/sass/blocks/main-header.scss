@@ -4,3 +4,11 @@
   font-size: 56px;
   line-height: 68px;
 }
+
+@media (max-width: $mobile-width-only) {
+  .main-header h2 {
+    font-size: 32px;
+    line-height: 40px;
+    width: inherit;
+  }
+}
