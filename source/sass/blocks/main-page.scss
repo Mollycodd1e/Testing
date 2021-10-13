@@ -70,6 +70,39 @@
   font-weight: 700;
 }
 
+.main-page button {
+  position: absolute;
+  top: 26px;
+  right: 2px;
+  width: 30px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+
+    width: 8px;
+    height: 2px;
+    background-color: #000000;
+  }
+
+  &::before {
+    right: 14px;
+    z-index: 20;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    right: 8.5px;
+    z-index: 20;
+    transform: rotate(-45deg);
+  }
+}
+
 .main-page__from-wrapper,
 .main-page__to-wrapper {
   margin-top: 16px;
@@ -85,6 +118,7 @@
   line-height: 18px;
   border: none;
   padding: 13px 14px;
+  border-radius: none;
 
   &:hover,
   &:focus {
@@ -351,6 +385,7 @@
   margin-top: 8px;
   cursor: pointer;
   border: none;
+  border-radius: none;
   box-sizing: border-box;
 
   &:hover,
@@ -366,39 +401,6 @@
 
 .main-page__price-wrapper input::placeholder {
   color: #cfcfcf;
-}
-
-.main-page button {
-  position: absolute;
-  top: 35px;
-  right: 14px;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-
-  &::after,
-  &::before {
-    position: absolute;
-    content: "";
-
-    width: 8px;
-    height: 2px;
-    background-color: #000000;
-  }
-
-  &::before {
-    right: 7px;
-    z-index: 20;
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    right: 1px;
-    z-index: 20;
-    transform: rotate(-45deg);
-  }
 }
 
 .main-page__temperature-regime-wrapper {
@@ -498,6 +500,7 @@
   line-height: 18px;
   border: none;
   cursor: pointer;
+  border-radius: none;
   box-sizing: border-box;
 
   &:hover,
@@ -785,6 +788,7 @@
     width: 100%;
     max-width: 169px;
     min-width: 149px;
+    border-radius: none;
   }
 
   .main-page__span-wrapper {
