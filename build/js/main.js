@@ -20,9 +20,11 @@
         if (inputBlock.classList.contains('main-page__' + blockName + '-wrapper--closed')) {
           inputBlock.classList.add('main-page__' + blockName + '-wrapper--opened');
           inputBlock.classList.remove('main-page__' + blockName + '-wrapper--closed');
+          inputBlockOptions[0].focus();
         } else {
           inputBlock.classList.remove('main-page__' + blockName + '-wrapper--opened');
           inputBlock.classList.add('main-page__' + blockName + '-wrapper--closed');
+          inputBlockOptions[0].blur();
         }
       });
 
@@ -34,6 +36,12 @@
           element.classList.add('main-page__' + blockName + '-option--active');
         })
       });
+
+      inputBlockToggle.onblur = function() {
+        if (inputBlock.classList.contains('main-page__' + blockName + '-wrapper--opened')) {
+          inputBlockOptions[0].focus();
+        }
+      }
     }
   }
 
